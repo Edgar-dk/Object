@@ -16,6 +16,7 @@ public class test {
         System.out.println(test.exchange(add, 1, 4));
 //        System.out.println(test.TrueOrFalse("fgdg", "g334bv", "gfg@gd."));
         test.location("godez gdsnf hhhhh");
+        test.account("fsda fd !234FSFC");
     }
 
     @Test
@@ -128,5 +129,29 @@ public class test {
         System.out.println(format);
     }
 
+    /*4.判断字符串里面的数据*/
+    public static void account(String arr){
+        if (arr==null){
+            System.out.println("输入的字符串不能等于空");
+            return;
+        }
+        int length = arr.length();
+        int numCount=0;
+        int lowCount=0;
+        int upCount=0;
+        int otherCount=0;
+        for (int i = 0; i < length; i++) {
+            if (arr.charAt(i)>'0'&&arr.charAt(i)<'9'){
+                numCount++;
+            }else if (arr.charAt(i)>'a'&&arr.charAt(i)<'z'){
+                lowCount++;
+            }else if (arr.charAt(i)>'A'&&arr.charAt(i)<'Z'){
+                upCount++;
+            }else {
+                otherCount++;
+            }
+        }
+        System.out.println("数字："+numCount+"小写字母："+lowCount+"大写字母："+upCount+"其他："+otherCount);
+    }
 
 }

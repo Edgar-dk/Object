@@ -18,7 +18,8 @@ public class BufferReaderAndWriter {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(BufferReader));
         String line;
         /*1.只要是读取的数据，不为空，就可以一直读取数据
-        *   读取的数据，放在line里面，然后输出，在往下面继续读取数据*/
+        *   读取的数据，放在line里面，然后输出，在往下面继续读取数据
+        *   读取一行数据，这一行数据，就放在string类型的字符串里面*/
         while ((line = bufferedReader.readLine())!=null){
             System.out.println(line);
         }
